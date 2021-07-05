@@ -1,18 +1,9 @@
 import qbittorrentapi
 from aiogram import Bot, Dispatcher, executor
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ParseMode
 
 from data import config
-
-
-class UserStates(StatesGroup):
-    main_menu = State()
-
-
-async def add_torrent(client: qbittorrentapi.Client, magnet_link: str) -> bool:
-    return await client.torrents.add(urls=magnet_link) == 'Ok.'
 
 
 # noinspection PyShadowingNames
