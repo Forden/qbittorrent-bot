@@ -1,0 +1,2 @@
+aiogram==2.14.1
+qbittorrent_api==2021.5.22
