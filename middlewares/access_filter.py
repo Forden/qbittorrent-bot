@@ -10,5 +10,4 @@ class AccessFilterMiddleware(BaseMiddleware):
     # noinspection PyUnusedLocal,PyMethodMayBeStatic
     async def on_process_message(self, message: types.Message, data: dict):
         if message.from_user.id not in config.admins:
-            print(f'user {message.from_user} trying to access bot')
             raise CancelHandler()
