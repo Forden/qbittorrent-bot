@@ -6,7 +6,7 @@ import states.user
 
 
 async def bot_start(msg: types.Message, state: FSMContext):
-    await msg.answer(f'Привет, {msg.from_user.full_name}!', reply_markup=keyboards.default.MainMenu.main_menu())
+    await msg.answer(f'Главное меню', reply_markup=keyboards.default.MainMenu.main_menu())
     if await state.get_state() is not None:
         try:
             await state.finish()
